@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spiel des Lebens oder so™</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="toolbar">
+        <button id="startPauseBtn">Start</button>
+        <button id="clearBtn">Leeren</button>
+        <button id="randomBtn">Zufall</button>
+        
+        <div class="control-group">
+            <label>Tempo:</label>
+            <input type="range" id="speedSlider" min="50" max="1000" step="50" value="200">
+            <span id="speedValue">200 ms</span>
+        </div>
+
+        <div class="control-group">
+            <label>Größe:</label>
+            <input type="range" id="sizeSlider" min="10" max="80" step="1" value="20">
+            <span id="sizeValue">20</span>
+        </div>
+
+        <div id="generationCount">Generation: 0</div>
+    </div>
+
+    <div class="simulation-container">
+        <canvas id="gridCanvas" width="500" height="500"></canvas>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
